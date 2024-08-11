@@ -1,0 +1,32 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\Software\Policies\PoliteShutdown]
+"ShutdownsDisabled"=dword:00000000
+"ShutdownHour"=dword:00000016
+"ShutdownMinute"=dword:0000001e
+"ShutdownCutOffInterval"=dword:000002d0
+"Log1"=dword:00000001
+"Log1Path"=hex(2):43,00,3a,00,5c,00,4c,00,6f,00,67,00,73,00,5c,00,4c,00,6f,00,67,\
+  00,31,00,2e,00,74,00,78,00,74,00,00,00
+"Log1Level"=dword:00000096
+"Log1Detail"=dword:00000001
+"Log2"=dword:00000000
+"Log2Path"=hex(2):44,00,3a,00,5c,00,4c,00,6f,00,67,00,73,00,5c,00,4c,00,6f,00,67,\
+  00,32,00,2e,00,74,00,78,00,74,00,00,00
+"Log2Level"=dword:000000c8
+"Log2Detail"=dword:00000000
+"LogStdOutLevel"=dword:00000064
+"LogStdOutDetail"=dword:00000001
+"ShutdownType"=dword:00000000
+"CheckLoggedOnUsers"=dword:00000001
+"CheckProcesses"=dword:00000001
+"CheckRunningSchedTasks"=dword:00000001
+"CheckWindowsUpdatesInProgress"=dword:00000001
+"CheckWindowsUpdatesToBeInstalled"=dword:00000001
+"CheckWindowsUpdatesToBeUninstalled"=dword:00000001
+"CheckLoggedOnByProcesses"=dword:00000001
+"ProcessesNotToInterupt"="msiexec.exe, customprocess.exe"
+"ErrorsBeforeEnd"=dword:00000005
+"ShutdownCheckPeriod"=dword:00000005
+"ShutdownUptimeRequired"=dword:00000010
+

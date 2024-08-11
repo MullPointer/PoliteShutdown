@@ -1,0 +1,41 @@
+
+#include <windows.h>
+#include "version.h"
+
+#ifndef DEBUG
+#define VER_DEBUG                   0
+#else
+#define VER_DEBUG                   VS_FF_DEBUG
+#endif
+
+VS_VERSION_INFO VERSIONINFO
+	FILEVERSION    	VER_FILEVERSION
+	PRODUCTVERSION 	VER_PRODUCTVERSION
+	FILEFLAGSMASK  	VS_FFI_FILEFLAGSMASK //enable all flags
+	FILEFLAGS      	(VER_PRERELEASE|VER_DEBUG)
+	FILEOS         	VOS_NT_WINDOWS32
+	FILETYPE       	VFT_APP
+	//FILESUBTYPE    	VFT2_UNKNOWN
+BEGIN
+	BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4" //US English - Windows ANSI codepage (Multilingual) - assume this is for following block, though it seems version info only displayed by windows if this ID chosen, even though I am set to UK english locale
+        BEGIN
+            VALUE "CompanyName",      VER_COMPANYNAME_STR
+            VALUE "FileDescription",  VER_FILEDESCRIPTION_STR
+            VALUE "FileVersion",      VER_FILEVERSION_STR
+            VALUE "InternalName",     VER_INTERNALNAME_STR
+            VALUE "LegalCopyright",   VER_LEGALCOPYRIGHT_STR
+            //VALUE "LegalTrademarks1", VER_LEGALTRADEMARKS1_STR
+            //VALUE "LegalTrademarks2", VER_LEGALTRADEMARKS2_STR
+            VALUE "OriginalFilename", VER_ORIGINALFILENAME_STR
+            VALUE "ProductName",      VER_PRODUCTNAME_STR
+            VALUE "ProductVersion",   VER_PRODUCTVERSION_STR
+        END
+    END
+
+	BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x809, 1200 //UK English - Unicode
+    END
+END
